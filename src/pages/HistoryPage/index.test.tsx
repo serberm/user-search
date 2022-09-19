@@ -18,6 +18,7 @@ describe('HistoryPage', () => {
     it('find success history item', () => {
       expect(component.queryByTestId('history-list')).toBeTruthy()
       expect(component.queryByTestId('test1')).toBeTruthy()
+      expect(component.queryByTestId('test2')).toBeTruthy()
     })
   })
 })

@@ -23,8 +23,8 @@ export interface IUser {
   subscriptions_url: string
   type: string
   url: string
-  name: string
-  email: string
+  name?: string
+  email?: string
   bio?: string
   company?: string
   followers?: string
