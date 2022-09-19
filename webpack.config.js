@@ -4,7 +4,6 @@ const webpack = require('webpack')
 const TerserPlugin = require('terser-webpack-plugin')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const DashboardPlugin = require('webpack-dashboard/plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
@@ -117,10 +116,6 @@ function getPlugins() {
     }),
     new ForkTsCheckerWebpackPlugin()
   ]
-
-  if (!isProduction) {
-    plugins.push(new DashboardPlugin())
-  }
 
   if (process.env.WEBPACK_BUNDLE_ANALYZER) {
     plugins.push(new BundleAnalyzerPlugin())
